@@ -11,17 +11,20 @@ long Fact(int n)
     }
     return result;
 }
+void clear()
+{
+    while(getchar()!='\n');
+}
 int main()
 {
     int a, b;
     long G;
-    LJK:
-        printf("Please input a and b:\n");
-        scanf("%d,%d", &a, &b);
-        if ((scanf("%d,%d", &a, &b) == 2) && (a >= b))
-            G = Fact(a) / (Fact(b) * Fact(a - b));
-        else
-            goto LJK;
-        printf("%ld", G);
-        return 0;
+    printf("Please input a and b:\n");
+    while(!((scanf("%d,%d", &a, &b) == 2) && (a >= b)))
+    {
+       clear();
+    }
+    G = Fact(a) / (Fact(b) * Fact(a - b));
+    printf("%ld", G);
+    return 0;
 }

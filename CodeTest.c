@@ -1,30 +1,31 @@
 #include <stdio.h>
-#include <math.h>
-#include <stdlib.h>
-long Fact(int n)
-{
-    int i;
-    long result = 1;
-    for (i = 2; i <= n;i++)
-    {
-        result = result * i;
-    }
-    return result;
-}
-void clear()
-{
-    while(getchar()!='\n');
-}
+void Hnt(int n, char a, char b, char c);
+int count;
 int main()
 {
-    int a, b;
-    long G;
-    printf("Please input a and b:\n");
-    while(!((scanf("%d,%d", &a, &b) == 2) && (a >= b)))
-    {
-       clear();
-    }
-    G = Fact(a) / (Fact(b) * Fact(a - b));
-    printf("%ld", G);
+    count = 1;
+    int n;
+
+    printf("Please enter the number of discs:");
+    scanf("%d", &n);
+    Hnt(n, 'a', 'b', 'c');
+    printf("\tTotal:%d\n", count);
     return 0;
+}
+
+void Hnt(int n, char a, char b, char c)
+{
+
+    if (n == 1)
+    {
+        printf("%2d-(%2d):%c==>%c\n", count, n, a, b);
+        count++;
+    }
+    else
+    {
+        Hnt(n - 1, a, c, b);
+        printf("%2d-(%2d):%c==>%c\n", count, n, a, c);
+        Hnt(n - 1, b, a, c);
+        count++;
+    }
 }

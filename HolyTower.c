@@ -1,32 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
-long counter = 1;
-long tower(int n, char A, char B, char C);
+void movedisc(unsigned n, char fromneedle, char toneedle, char usingneedle);
+int i = 0;
 int main()
 {
-    int n;
-    char A, B, C;
+    unsigned n;
     printf("Please enter the number of discs:");
     scanf("%d", &n);
-    printf("\tTotal:%d\n",tower(n,A,B,C));
+    movedisc(n, 'A', 'B', 'C');
+    printf("\tTotal:%d\n", i);
     return 0;
 }
-long tower(int n,char A,char B,char C)
+void movedisc(unsigned n, char fromneedle, char toneedle, char usingneedle)
 {
-    A = 'A';
-    B = 'B';
-    C = 'C';
-    counter = counter + 1;
-    if(n==1)
-    {
-        printf("%2d-(%2d):%c==>%c\n", counter, n, A, B);
-    }
+    if (n == 1)
+        printf("%2d-(%2d):%c==>%c\n", ++i, n, fromneedle, toneedle);
     else
     {
-        counter = counter + tower(n - 1,A,C,B);
-        printf("%2d-(%2d):%c==>%c\n", counter, n, A, C);
-        counter = counter + tower(n - 1, B, A, C);
-        counter = counter + 1;
+        movedisc(n - 1, fromneedle, usingneedle, toneedle);
+        printf("%2d-(%2d):%c==>%c\n", ++i, n, fromneedle, toneedle);
+        movedisc(n - 1, usingneedle, toneedle, fromneedle);
     }
-    return counter;
 }

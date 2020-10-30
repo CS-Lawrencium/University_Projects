@@ -25,3 +25,4 @@ int main()
         printf("is not\n");
     return 0;
 }
+//判断一串字符是否可以作为标题

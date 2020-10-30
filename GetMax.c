@@ -12,4 +12,4 @@ int main()
     printf("max = %d\n", GetMax(a,b));
     return 0;
 }
-//输出两者之间的最大值！
+//输出两者之间的最大值

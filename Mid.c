@@ -46,3 +46,4 @@ int mid(int a, int b, int c)
     }
     return tmp2;
 }
+//求出三个整数的中间值

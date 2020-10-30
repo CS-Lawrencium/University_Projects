@@ -24,4 +24,4 @@ int main()
         printf("No!\n");
     return 0;
 }
-//判断是否是素数
+//判断某个数是否是素数

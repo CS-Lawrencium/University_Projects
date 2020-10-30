@@ -13,4 +13,4 @@ int main()
     printf("sum = %d\n",sum);
     return 0;
 }
-//这是一个基础的循环
+//循环

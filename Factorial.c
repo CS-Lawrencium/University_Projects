@@ -24,3 +24,4 @@ long Factorial(int x)
     }
     return result;
 }
+//计算一个数的阶乘

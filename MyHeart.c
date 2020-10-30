@@ -7,3 +7,4 @@ int main()
         printf("I love you and I won't leave you! ");
     return 0;
 }
+//对女朋友的表白

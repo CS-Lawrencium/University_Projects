@@ -21,4 +21,4 @@ void movedisc(unsigned n, char fromneedle, char toneedle, char usingneedle)
         movedisc(n - 1, usingneedle, toneedle, fromneedle);
     }
 }
-//输出汉诺塔问题的解！
+//输出汉诺塔问题的解

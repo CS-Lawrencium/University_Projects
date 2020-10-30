@@ -16,3 +16,4 @@ int main()
  
     return 0;
 }       
+//求出字符长度

@@ -20,3 +20,4 @@ int main()
     printf("%ld", sum);
     return 0;
 }
+//阶乘求和

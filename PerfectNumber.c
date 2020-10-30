@@ -28,3 +28,4 @@ int GetPerfect(int x)
     }
     return sum == x ? i : 0;
 }
+//寻找完美数

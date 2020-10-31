@@ -8,4 +8,4 @@ int main()
     printf("c=%d\n",c);
     return 0;
 }
-//君赋值语句本当上手!
+//君赋值语句本当上手

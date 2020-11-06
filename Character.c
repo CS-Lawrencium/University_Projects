@@ -10,4 +10,4 @@ int main()
     }
     return 0;
 }
-//君getchar语句本当上手!
+//君getchar语句本当上手

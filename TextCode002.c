@@ -13,4 +13,4 @@ int main()
     printf("End of program\n");
     return 0;
 }
-//课本P13：如何输出a、b、c三种变量的值
+//课本P13：输出a、b、c三种变量的值

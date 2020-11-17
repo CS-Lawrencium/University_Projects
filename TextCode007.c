@@ -1,3 +1,5 @@
+//课本p28：比较前缀运算符和后缀运算符的差异
+
 #include <stdio.h>
 int main()
 {
@@ -10,4 +12,3 @@ int main()
     printf("b=%d", b);
     return 0;
 }
-//课本p28：比较前缀运算符和后缀运算符的差异

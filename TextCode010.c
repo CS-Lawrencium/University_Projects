@@ -1,3 +1,5 @@
+//课本p35：学习强制类型转换运算符的使用方法
+
 #include <stdio.h>
 int main()
 {
@@ -7,4 +9,3 @@ int main()
     printf("(float)m/2 = %f\n", (float)m / 2);
     return 0;
 }
-//课本p35：学习强制类型转换运算符的使用方法

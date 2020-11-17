@@ -1,3 +1,5 @@
+//课本p35：编程从键盘输入a、b、c的值，计算并输出三角形的面积
+
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -10,4 +12,3 @@ int main()
     printf("area = %f\n", area);
     return 0;
 }
-//课本p35：编程从键盘输入a、b、c的值，计算并输出三角形的面积

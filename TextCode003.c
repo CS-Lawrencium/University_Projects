@@ -1,3 +1,5 @@
+//课本p17：计算并显示每种数据类型所占储存的大小
+
 #include <stdio.h>
 int main()
 {
@@ -11,4 +13,3 @@ int main()
     printf("Created by Lawrencium");
     return 0;
 }
-//课本p17：计算并显示每种数据类型所占储存的大小

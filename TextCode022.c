@@ -9,7 +9,7 @@
 int main()
 {
     float a, b, c, disc, p, q;
-    printf("Please enter the coefficient a,b,c:");
+    printf("Please enter the coefficients a,b,c:");
     scanf("%f,%f,%f", &a, &b, &c);
     if(fabs(a)<=EPS)
     {
@@ -32,7 +32,7 @@ int main()
         else
         {
             printf("x1 = %.2f+%.2fi,", p, q);
-            printf("x2 = %.2f+%.2fi\n", p, q);
+            printf("x2 = %.2f-%.2fi\n", p, q);
         }
     }
     return 0;

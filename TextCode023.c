@@ -8,19 +8,19 @@ int main()
     char op;
     printf("Please enter an expression:");
     scanf("%d%c%d", &data1, &op, &data2);
-    switch (op)//根据输入的运算符确定执行的运算
+    switch (op) //根据输入的运算符确定执行的运算
     {
-    case '+'://加法运算
+    case '+': //加法运算
         printf("%d + %d = %d \n", data1, data2, data1 + data2);
         break;
-    case '-'://减法运算
+    case '-': //减法运算
         printf("%d - %d = %d \n", data1, data2, data1 - data2);
         break;
-    case '*'://乘法运算
+    case '*': //乘法运算
         printf("%d * %d = %d \n", data1, data2, data1 * data2);
         break;
-    case '/'://除法运算
-        if (data2 == 0)//避免除零错误，检验除数是否为零
+    case '/':           //除法运算
+        if (data2 == 0) //避免除零错误，检验除数是否为零
             printf("Division by zero!\n");
         else
             printf("%d / %d = %d \n", data1, data2, data1 / data2);

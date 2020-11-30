@@ -19,7 +19,7 @@ long Fact(int n)
 {
     int i;
     long result = 1;
-    for (i = 2; i <= n;i++)
+    for (i = 2; i <= n; i++)
     {
         result *= i;
     }

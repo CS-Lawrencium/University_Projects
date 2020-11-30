@@ -6,7 +6,7 @@
 int main()
 {
     int n = 101;
-    while(n<100)
+    while (n < 100)
     {
         printf("n = %d\n", n);
         n++;
@@ -16,7 +16,7 @@ int main()
     {
         printf("n = %d\n", n);
         n++;
-    } while (n<100);
+    } while (n < 100);
     //n的初值不小于100，但循环至少执行一次
     return 0;
 }

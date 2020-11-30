@@ -14,15 +14,15 @@ int main()
     do
     {
         printf("Please input a magic number:");
-        scanf("%d", &guess);
-        counter++;
+        scanf("%d", &guess); //输入用户猜的数guess
+        counter++;           //计数器变量counter进行"+1"操作
         if (guess > magic)
             printf("Wrong!Too high!\n");
         else if (guess < magic)
             printf("Wrong!Too small!\n");
         else
             printf("You are fucking smart!");
-    } while (guess != magic);
+    } while (guess != magic); //执行到用户猜对为止
     printf("counter = %d\n", counter);
     return 0;
 }

@@ -16,20 +16,20 @@ int main()
         printf("It is not a quadratic equation!\n");
         exit(0);
     }
-    disc = b * b - 4 * a * c;//计算判别式
+    disc = b * b - 4 * a * c; //计算判别式
     p = -b / (2 * a);
     q = sqrt(fabs(disc)) / (2 * a);
-    if(fabs(disc)<=EPS)//判别式等于0时，输出两个相等实根
+    if (fabs(disc) <= EPS) //判别式等于0时，输出两个相等实根
     {
         printf("x1 = x2 = %.2f\n", p);
     }
     else
     {
-        if(disc>EPS)//判别式大于0时，输出两个不等实根
+        if (disc > EPS) //判别式大于0时，输出两个不等实根
         {
             printf("x1 = %.2f, x2 = %.2f\n", p + q, p - q);
         }
-        else//判别式小于0时，输出两个共轭复根
+        else //判别式小于0时，输出两个共轭复根
         {
             printf("x1 = %.2f+%.2fi,", p, q);
             printf("x2 = %.2f-%.2fi\n", p, q);

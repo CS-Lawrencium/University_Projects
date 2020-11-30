@@ -6,16 +6,16 @@
 int main()
 {
     int a;
-    char b,c;
+    char b, c;
     printf("Please input a integer:");
     scanf("%d", &a);
     printf("This integer is %d\n", a);
-    getchar();//将存于缓冲区中的回车符读入，避免在后面作为有效字符读入
+    getchar(); //将存于缓冲区中的回车符读入，避免在后面作为有效字符读入
     printf("Please input a character:");
     scanf("%f", &b);
     printf("This character is %f\n", b);
     printf("Plese input another character:");
-    scanf(" %c", &c);//Attention!
+    scanf(" %c", &c); //Attention!
     printf("This character is %f\n", c);
     return 0;
 }

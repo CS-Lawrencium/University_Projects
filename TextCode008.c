@@ -7,8 +7,7 @@ int main()
     double r;
     printf("Input r:");
     scanf("%lf", &r);
-    printf("circumference = %f\n", 2 * pi * r);//编译时PI被替换为3.14159
-    printf("area = %f\n,pi*r*r");//编译时PI被替换为3.14159
+    printf("circumference = %f\n", 2 * pi * r); //编译时PI被替换为3.14159
+    printf("area = %f\n,pi*r*r");               //编译时PI被替换为3.14159
     return 0;
 }
-

@@ -10,7 +10,7 @@ int main()
     printf("Please input a integer:");
     scanf("%d", &a);
     printf("This integer is %d\n", a);
-    getchar();//Attention!
+    getchar();//将存于缓冲区中的回车符读入，避免在后面作为有效字符读入
     printf("Please input a character:");
     scanf("%f", &b);
     printf("This character is %f\n", b);

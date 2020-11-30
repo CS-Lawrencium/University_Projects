@@ -9,7 +9,7 @@ int main()
     if(a>b)
         max = a;
     else
-        max = b;
+        max = b;//相当于a<=b的情况
     printf("max = %d\n", max);
     return 0;
 }

@@ -9,9 +9,9 @@ int main()
     a = 1;
     b = 2.5;
     c = 'A';
-    printf("a = %d\n", a);
-    printf("b = %f\n", b);
-    printf("c = %c\n", c);
-    printf("End of program\n");
+    printf("a = %d\n", a);//按整形格式输出变量a的值
+    printf("b = %f\n", b);//按实型格式输出变量b的值
+    printf("c = %c\n", c);//按字符型格式输出变量c的值
+    printf("End of program\n");//输出一个字符串
     return 0;
 }

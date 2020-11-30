@@ -11,25 +11,25 @@ int main()
     float a, b, c, disc, p, q;
     printf("Please enter the coefficients a,b,c:");
     scanf("%f,%f,%f", &a, &b, &c);
-    if(fabs(a)<=EPS)
+    if (fabs(a) <= EPS) //a=0时，输出"It is not a quadratic equation!\n"
     {
         printf("It is not a quadratic equation!\n");
         exit(0);
     }
-    disc = b * b - 4 * a * c;
+    disc = b * b - 4 * a * c;//计算判别式
     p = -b / (2 * a);
     q = sqrt(fabs(disc)) / (2 * a);
-    if(fabs(disc)<=EPS)
+    if(fabs(disc)<=EPS)//判别式等于0时，输出两个相等实根
     {
         printf("x1 = x2 = %.2f\n", p);
     }
     else
     {
-        if(disc>EPS)
+        if(disc>EPS)//判别式大于0时，输出两个不等实根
         {
             printf("x1 = %.2f, x2 = %.2f\n", p + q, p - q);
         }
-        else
+        else//判别式小于0时，输出两个共轭复根
         {
             printf("x1 = %.2f+%.2fi,", p, q);
             printf("x2 = %.2f-%.2fi\n", p, q);

@@ -6,10 +6,10 @@ int main()
 {
     int i, n, sum;
     printf("Input n:");
-    sum = 0;
+    sum = 0;//累加和变量初始化为0
     for (i = 1; i <= n;i++)
     {
-        sum = sum + i;
+        sum = sum + i;//做累加运算
     }
     printf("sum = %d\n", sum);
     return 0;

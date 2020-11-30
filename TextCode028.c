@@ -10,7 +10,7 @@ int main()
     for (i = 1; i <= n;i++)
     {
         p = p * i;
-        printf("%d! = %ld\n", i, p);
+        printf("%d! = %ld\n", i, p);//输出1~n之间所有数的阶乘值
     }
     return 0;
 }

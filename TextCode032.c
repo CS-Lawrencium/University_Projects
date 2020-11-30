@@ -9,6 +9,7 @@ int main()
     unsigned int seed;
     printf("Please input the seed:\n");
     scanf("%u", &seed);
+    srand(seed);
     magic = rand() % 100 + 1;
     do
     {

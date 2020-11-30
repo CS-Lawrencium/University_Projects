@@ -3,7 +3,7 @@
 #include <stdio.h>
 int main()
 {
-    const double pi = 3.1415926;
+    const double pi = 3.1415926;//定义实型的const常量PI
     double r;
     printf("Input r:");
     scanf("%lf", &r);

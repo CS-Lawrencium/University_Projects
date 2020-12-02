@@ -1,51 +1,25 @@
 #include <stdio.h>
-#define STUD 30  /* 最多可能的学生人数 */
-#define COURSE 5 /* 最多可能的考试科目数 */
-void Total(int *pScore, int sum[], float aver[], int m, int n);
-void Print(int *pScore, int sum[], float aver[], int m, int n);
+#define N 10
 int main()
 {
-    int i, j, m, n, score[STUD][COURSE], sum[STUD];
-    float aver[STUD];
-    printf("How many students?");
-    scanf("%d", &m); //学生数
-    printf("How many courses?");
-    scanf("%d", &n); //科目数
-    printf("Input scores:\n");
-    for (i = 0; i < m; i++)
+    int a[N] = {2, 17, 8, 3, 24, 53, 82, 1, 29, 101};
+    int i, j, k, t;
+    for (i = 0; i < 9; i++)
     {
-        for (j = 0; j < n; j++)
+        k = i;
+        for (j = i + 1; j < 10; j++)
         {
-            scanf("%d", &score[i][j]); //学生成绩
+            if (a[j] > a[k])
+                k = j;
+        }
+        if (k != i)
+        {
+            t = a[k];
+            a[k] = a[i];
+            a[i] = t;
         }
     }
-    Total(*score, sum, aver, m, n); //总分
-    Print(*score, sum, aver, m, n);
+    for (i = 0; i < 10; i++)
+        printf("%d ", a[i]);
     return 0;
-}
-void Total(int *pScore, int sum[], float aver[], int m, int n)
-{
-    int i, j;
-    for (i = 0; i < m; i++)
-    {
-        sum[i] = 0;
-        for (j = 0; j < n; j++)
-        {
-            sum[i] = sum[i] + pScore[i * n + j];
-        }
-        aver[i] = (float)sum[i] / n;
-    }
-}
-void Print(int *pScore, int sum[], float aver[], int m, int n)
-{
-    int i, j;
-    printf("Result:\n");
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-        {
-            printf("%4d\t", pScore[i * n + j]);
-        }
-        printf("%5d\t%6.1f\n", sum[i], aver[i]);
-    }
 }

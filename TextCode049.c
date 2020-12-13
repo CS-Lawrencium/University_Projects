@@ -46,7 +46,7 @@ void DataSort(int score[], int n) //DataSort()函数定义
     }
 }
 //函数功能：打印学生成绩
-void PrintScore(int score[], int n)//PrintfScore()函数定义
+void PrintScore(int score[], int n) //PrintfScore()函数定义
 {
     int i;
     for (i = 0; i < n; i++)

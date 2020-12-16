@@ -38,7 +38,7 @@ int main()
             printf("%4d", score[i][j]);
             if (score[i][j] == score[i][j + 1])
                 counter++;
-        }
+        } 
         printf("\n");
     }
     return 0;

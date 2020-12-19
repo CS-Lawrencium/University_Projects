@@ -1,41 +1,34 @@
 #include <stdio.h>
-#define StuNum 40
-int ReadScore(long Number[], int Score[]);
-int FindScore(long Number[], long A, int ret1);
+#define N 10
+void BubbleSort(int array[], int n);
 int main()
 {
-    long Number[StuNum], A;
-    int Score[StuNum], B;
-    int ret1, ret2;
-    ret1 = ReadScore(Number, Score);
-    printf("Total students are %d\n", ret1);
-    printf("Input the searching ID:");
-    scanf("%ld", &A);
-    ret2 = FindScore(Number, A, ret1);
-    if (ret2 != -1)
-        printf("score = %d\n", Score[ret2]);
-    else
-        printf("Not found!\n");
+    int array[N], i, j, k;
+    printf("Hello There!Please enter 10 numbers beside!\n");
+    for (i = 0; i < N;i++)
+    {
+        scanf("%d", &array[i]);
+    }
+    BubbleSort(array, N);
+    for (i = 0; i < N;i++)
+    {
+        printf("%d\t", array[i]);
+    }
     return 0;
 }
-int ReadScore(long Number[], int Score[])
+void BubbleSort(int array[], int n) //BubbleSort()函数定义
 {
-    int i = -1;
-    do
+    int i, j, temp;
+    for (i = 0; i < n - 1; i++)
     {
-        i++;
-        printf("Input student's ID and score:");
-        scanf("%ld%d", &Number[i], &Score[i]);
-    } while (Score[i] >= 0 && Number[i] >= 0);
-    return i;
-}
-int FindScore(long Number[], long A, int ret1)
-{
-    int i;
-    for (i = 0; i < ret1; i++)
-    {
-        if (A == Number[i])
-            return i;
+        for (j = n - 1; j > 0; j--)
+        {
+            if (array[j] > array[j - 1]) //按数组array的元素从大到小排序
+            {
+                temp = array[j];
+                array[j] = array[j - 1];
+                array[j - 1] = temp;
+            }
+        }
     }
-    return -1;
 }

@@ -41,7 +41,7 @@ void DataSort(int score[], int n) //DataSort()函数定义
             {
                 k = j;
             }
-            if(k!=i)
+            if (k != i)
             {
                 temp = score[k];
                 score[k] = score[i];

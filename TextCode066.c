@@ -10,8 +10,9 @@ void SortString(char str[][MAX_LEN], int n);
 int main()
 {
     int i, n;
-    char name[N][MAX_LEN]; //定义二位字符数组
-    printf("%d", &n);
+    char name[N][MAX_LEN]; //定义二维字符数组
+    printf("How many countries?");
+    scanf("%d", &n);
     getchar(); //读走输入缓冲区中的回车符
     printf("Input their names:\n");
     for (i = 0; i < n; i++)

@@ -1,4 +1,4 @@
-//课本p269：学习从函数返回字符串指针
+//课本p270：学习从函数返回字符串指针
 
 #include <stdio.h>
 #define N 80
@@ -14,17 +14,20 @@ int main()
     printf("The result is: %s\n",MyStrcat(first,second));
     return 0;
 }
+//函数功能：将字符串srcStr连接到字符串dstStr的后面
 char *MyStrcat(char *dstStr,char *srcStr)
 {
-    char *pStr = dstStr;
+    char *pStr = dstStr;//保存字符串dstStr的首地址
+    //将指针移到字符串dstStr的末尾
     while(*dstStr!='\0')
     {
         dstStr++;
     }
+    //将字符串srcStr复制到字符串dstStr的后面
     for (; *srcStr != '\0';dstStr++,srcStr++)
     {
         *dstStr = *srcStr;
     }
-    *dstStr = '\0';
-    return pStr;
+    *dstStr = '\0';//在连接后的字符串的末尾添加字符串结束标志
+    return pStr;//返回连接后的字符串dstStr的首地址
 }

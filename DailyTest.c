@@ -1,34 +1,36 @@
 #include <stdio.h>
-#define N 10
-void BubbleSort(int array[], int n);
-int main()
+#include <string.h>
+void fun(char *s, int n, int *t)
 {
-    int array[N], i, j, k;
-    printf("Hello There!Please enter 10 numbers beside!\n");
-    for (i = 0; i < N;i++)
+    int i, k = 0;
+    s[n] = 'a';
+    s[n + 1] = '\0';
+    while (s[k] != 'a')
+        k++;
+    if (k == n)
     {
-        scanf("%d", &array[i]);
+        *t = 0;
     }
-    BubbleSort(array, N);
-    for (i = 0; i < N;i++)
+    else
     {
-        printf("%d\t", array[i]);
-    }
-    return 0;
-}
-void BubbleSort(int array[], int n) //BubbleSort()函数定义
-{
-    int i, j, temp;
-    for (i = 0; i < n - 1; i++)
-    {
-        for (j = n - 1; j > 0; j--)
+        for (i = k; i < n; i++)
         {
-            if (array[j] > array[j - 1]) //按数组array的元素从大到小排序
-            {
-                temp = array[j];
-                array[j] = array[j - 1];
-                array[j - 1] = temp;
-            }
+            s[i] = s[i + 1];
+            s[i + 1] = '\0';
         }
     }
+}
+int main()
+{
+    char s[20];
+    int len, *t = NULL;
+    printf("Input a string:");
+    gets(s);
+    len = strlen(s);
+    fun(s, len, t);
+    if (t == 0)
+        printf("Not exist!\n");
+    else
+        printf("Result is:%s\n", s);
+    return 0;
 }

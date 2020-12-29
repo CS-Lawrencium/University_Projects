@@ -1,35 +1,23 @@
 #include <stdio.h>
-void bubble(int data[], int n);
-#define LEN 10
+#include <string.h>
+#define N 7
 int main()
 {
-    int data[LEN], i;
-    for (i = 0; i < LEN; i++)
+    char str[N];
+    int i = 0, counter = 0;
+    printf("Input your password:\n");
+    while (i < 6 && counter < 6)
     {
-        scanf("%d", data[i]);
-    }
-    printf("\n");
-    bubble(data, LEN);
-    for (i = 0; i < LEN; i++)
-    {
-        printf("%8d", data[i]);
+        scanf("%c", &str[i]);
+        getchar();
+        if (str[i] >= 48 && str[i] <= 57)
+        {
+            counter++;
+            printf("%c, you have enter %d-bits number\n", str[i], counter);
+            i++;
+        }
+        else
+            printf("error\n");
     }
     return 0;
-}
-
-void bubble(int data[], int n)
-{
-    int i, j, temp;
-    for (i = 0; i < n; i++)
-    {
-        for (j = n - 1; j >= 0; j--)
-        {
-            if (data[j] < data[j - 1])
-            {
-                temp = data[i - 1]; //zcfu
-                data[i] = data[i - 1];
-                data[i - 1] = temp;
-            }
-        }
-    }
 }

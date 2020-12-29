@@ -1,15 +1,23 @@
 #include <stdio.h>
+#include <string.h>
+#define N 7
 int main()
 {
-    int i;
-    float s1 = 2, s2 = 1;
-    float x, sum = 0;
-    for (i = 1; i <= 20; i++)
+    char str[N];
+    int i = 0, counter = 0;
+    printf("Input your password:\n");
+    while (i < 6 && counter < 6)
     {
-        sum += s1 / s2;
-        x = s1;
-        s1 += s2;
-        s2 = x;
+        scanf("%c", &str[i]);
+        getchar();
+        if (str[i] >= 48 && str[i] <= 57)
+        {
+            counter++;
+            printf("%c, you have enter %d-bits number\n", str[i], counter);
+            i++;
+        }
+        else
+            printf("error\n");
     }
-    printf("sum = %9.6f\n", sum);
+    return 0;
 }

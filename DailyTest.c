@@ -1,45 +1,31 @@
 #include <stdio.h>
-typedef struct time_rec
-{
-    int hours;
-    int mins;
-    int secs;
-} TIME_REC;
-void input_time(struct time_rec *current_time);
-void increment_time(struct time_rec *current_time);
-void output_time(struct time_rec *current_time);
+#include <string.h>
+#define N 20
+char *MyStrcat(char *dstStr, char *srcStr);
 int main()
 {
-    TIME_REC current_time;
-    input_time(&current_time);
-    increment_time(&current_time);
-    output_time(&current_time);
+    char str1[2 * N], str2[N];
+    printf("Enter string 1:");
+    gets(str1);
+    printf("Enter string 2:");
+    gets(str2);
+    MyStrcat(str1, str2);
+    printf("a+b=%s\n", str1);
     return 0;
 }
-void input_time(struct time_rec *current_time)
+char *MyStrcat(char *dstStr, char *srcStr)
 {
-    printf("请输入当前时间（时 分 秒）：");
-    scanf("%d%d%d", &current_time->hours, &current_time->mins, &current_time->secs);
-}
-void increment_time(struct time_rec *current_time)
-{
-    current_time->secs++;
-    if(current_time->secs>=60)
+    char *pStr = dstStr; //保存字符串dstStr的首地址
+    //将指针移到字符串dstStr的末尾
+    while (*dstStr != '\0' && *dstStr != ' ')
     {
-        current_time->secs = current_time->secs - 60;
-        current_time->mins++;
+        dstStr++;
     }
-    if(current_time->mins>=60)
+    //将字符串srcStr复制到字符串dstStr的后面
+    for (; *srcStr != '\0'; dstStr++, srcStr++)
     {
-        current_time->mins = current_time->mins - 60;
-        current_time->hours++;
+        *dstStr = *srcStr;
     }
-    if(current_time->hours>=24)
-    {
-        current_time->hours = current_time->hours - 24;
-    }
-}
-void output_time(struct time_rec *current_time)
-{
-    printf("当前时间：%d时%d分%d秒！", current_time->hours, current_time->mins, current_time->secs);
+    *dstStr = '\0'; //在连接后的字符串的末尾添加字符串结束标志
+    return pStr;    //返回连接后的字符串dstStr的首地址
 }

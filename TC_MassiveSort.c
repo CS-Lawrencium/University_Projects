@@ -3,6 +3,7 @@
 //Date：      16/12/2020
 
 #include <stdio.h>
+#include <stdlib.h>
 #define N 100
 void ReadArray(int array[], int n);             //ReadArray()函数原型
 void QuickSort(int array[], int low, int high); //QuickSort()函数原型
@@ -11,13 +12,32 @@ int Partition(int array[], int low, int high);  //GetStandard()函数原型
 int main()
 {
     int array[N] = {0};
-    int n, ret = 0;
+    int n, ret = 0, counter = 0;
     int low, high;
     do
     {
-        printf("Please enter a number (<100) then I will create an array for you.\n");
+        if (counter == 0)
+        {
+            printf("Please enter a number (<100) then I will create an array for you.\n");
+        }
+        else if (counter == 1)
+        {
+            printf("");
+        }
+        else if (counter <= 10 && counter > 1)
+        {
+            printf("So please enter a number (<100) then I will create an array for you again and again.\n");
+        }
+        else
+        {
+            printf("Fuck you,leather man!\n");
+            exit(0);
+        }
         ret = scanf("%d", &n);
-    } while ((ret == 0 || n <= 2 || n > N) && printf("Holy Cow!What the hell have you entered?"));
+        getchar();
+        counter++;
+    } while ((ret == 0 || n <= 2 || n > N) && printf("Holy Cow!What the hell have you entered?\n"));
+    low = 0;
     high = n - 1;
     ReadArray(array, n);
     QuickSort(array, low, high);
@@ -84,9 +104,9 @@ int Partition(int array[], int low, int high)
             i++;
         }
 
-        if (i < j)// 当找到比 array[j] 大的时，就把前面的值 array[i] 赋给它
+        if (i < j) // 当找到比 array[j] 大的时，就把前面的值 array[i] 赋给它
         {
-            array[j] = array[i]; 
+            array[j] = array[i];
         }
     }
     array[i] = key; // 把基准数据赋给正确位置

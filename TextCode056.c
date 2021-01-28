@@ -8,8 +8,8 @@ int main()
 {
     int a = 0, b = 1;
     char c = 'A';
-    int *pa = &a, *pb = &b; //在定义指针变量pa和pb的同时对其初始化
-    char *pc = &c;          //在定义指针变量pc的同时对其初始化
+    int* pa = &a, * pb = &b; //在定义指针变量pa和pb的同时对其初始化
+    char* pc = &c;          //在定义指针变量pc的同时对其初始化
     *pa = 9;                //修改指针变量pa所指向的变量的值
     printf("a is %d,&a is %p,pa is %p\n", a, &a, pa);
     printf("b is %d,&b is %p,pa is %p\n", b, &b, pb);
